@@ -3,22 +3,6 @@ PROPFILE=true
 POSTFSDATA=true
 LATESTARTSERVICE=true
 cd $MODPATH
-if [ "$BOOTMODE" != true ]; then
-  abort "-----------------------------------------------------------"
-  ui_print "▌*! 请在 Magisk/KernelSU/APatch Manager 中安装"
-  ui_print "▌*! 不支持从recovery中安装"
-  abort "-----------------------------------------------------------"
-elif [ "$KSU" = true ] && [ "$KSU_VER_CODE" -lt 10670 ]; then
-  abort "-----------------------------------------------------------"
-  ui_print "▌*! 请更新您的 KernelSU 和 KernelSU 管理器"
-  abort "-----------------------------------------------------------"
-fi
-if [[ "$(getprop ro.build.version.sdk)" -lt 31 ]]; then
-  ui_print "▌*"
-  ui_print "▌*不能用于任何低于Android 12的设备."
-  ui_print "▌*"
-
-fi
 service_dir="/data/adb/service.d"
 if [ "$KSU" = "true" ]; then
   ui_print "▌*kernelSU版本: $KSU_VER ($KSU_VER_CODE)"
@@ -39,25 +23,11 @@ fi
 EXTRACT() {
   ui_print "▌*为Magisk/KernelSU/APatch提取模块文件"
   unzip -o "$ZIPFILE" -x 'META-INF/*' -d $MODPATH >&2
-  unzip -o "$ZIPFILE" 'bin/*' -d $MODPATH >&2
-  unzip -o "$ZIPFILE" 'box/*' -d $MODPATH >&2
-  unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
-  unzip -o "$ZIPFILE" 'scripts/*' -d $MODPATH >&2
-  unzip -o "$ZIPFILE" 'toybox/*' -d $MODPATH >&2
-  unzip -o "$ZIPFILE" 'sqlite3/*' -d $MODPATH >&2
-  unzip -o "$ZIPFILE" tweak -d $MODPATH >&2
-  unzip -o "$ZIPFILE" service.sh -d $MODPATH >&2
-  unzip -o "$ZIPFILE" module.prop -d $MODPATH >&2
 }
 EXTRACT
 PERMISSION() {
   ui_print "▌*正在设置权限"
   set_perm_recursive $MODPATH 0 0 0755 0755
-  set_perm_recursive $MODPATH/bin 0 0 0755 0755
-  set_perm_recursive $MODPATH/box 0 0 0755 0755
-  set_perm_recursive $MODPATH/scripts 0 0 0755 0755
-  set_perm_recursive $MODPATH/toybox 0 0 0755 0755
-  set_perm_recursive $MODPATH/sqlite3 0 0 0755 0755
 }
 PERMISSION
 CHARGE_FULL=$(cat /sys/class/power_supply/battery/charge_full)
