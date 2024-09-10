@@ -1,6 +1,6 @@
 id=read-write
 name=APatch-KSU可读写
-version=v1
+version=2.0
 versionCode=1
 author=idyll™2018
-description=[运行中😊]📲APatch与KSU通过OverlayFS实现直接修改system分区可读写，通过删除/data/adb/modules/.rw文件夹恢复！
+description=[运行中😊]📲APatch与KSU通过OverlayFS实现分区可读写，通过删除/data/adb/modules/.rw文件夹恢复！
