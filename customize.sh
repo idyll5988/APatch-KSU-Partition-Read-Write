@@ -13,10 +13,14 @@ if [ -d "/data/adb/modules/read-write" ]; then
   ui_print "▌*已删除旧模块"
 fi
 if [ "$KSU" = "true" ]; then
+ui_print "▌*👺KernelSU=已安装*" 
 ui_print "▌*👺KernelSU版本=$KSU_KERNEL_VER_CODE (kernel) + $KSU_VER_CODE (ksud)*" 
+ui_print "▌*👺su版本=$(su -v)*" 
 elif [ "$APATCH" = "true" ]; then
 APATCH_VER=$(cat "/data/adb/ap/version")
+ui_print "▌*👺APatch=已安装*" 
 ui_print "▌*👺APatch版本=$APATCH_VER*" 
+ui_print "▌*👺su版本=$(su -v)*" 
 else
 ui_print "▌*👺Magisk=已安装*" 
 ui_print "▌*👺su版本=$(su -v)*" 
