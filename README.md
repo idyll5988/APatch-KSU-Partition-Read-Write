@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/6120ea14-226c-4669-bb81-894144589ec4
+
 APatch and KSU make direct modification of system partitions readable and writable via OverlayFS
 
 APatch 和 KSU 使系统分区的直接修改可通过 OverlayFS 读取和写入
