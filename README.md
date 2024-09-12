@@ -1,6 +1,5 @@
 
-
-https://github.com/user-attachments/assets/6120ea14-226c-4669-bb81-894144589ec4
+https://github.com/user-attachments/assets/c2ba507a-dc6b-4372-a437-ac746eb7c2f3
 
 APatch and KSU make direct modification of system partitions readable and writable via OverlayFS
 
