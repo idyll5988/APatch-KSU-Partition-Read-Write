@@ -13,6 +13,10 @@ Battery Inspection - Health - Drain - Cycle
 
 电池检测-健康-损耗-循环
 
+增加WebUI-界面控制版本
+
+Added WebUI-interface control version
+
 避免内存泄漏
 
 自动5秒刷新日志
