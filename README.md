@@ -33,6 +33,8 @@ Added WebUI-interface control version
 
 加入三星官方解除温控功能
 
+如果是网络问题导致资源无法加载（如黑屏），尝试更换网络环境或者使用VPN服务
+
 Optimize performance
 
 Avoid memory leaks
@@ -50,6 +52,8 @@ Add APatch-KSU partition read/write.
 Add disable some functions under oneui 6.1 system.
 
 Join Samsung's Official Undo Temperature Control
+
+If there is a network problem that prevents resources from loading (e.g., a black screen), try changing your network environment or using a VPN service
 
 ![691173C75800619CD80BE1C4190507C4](https://github.com/user-attachments/assets/842b5f54-90bb-4ee1-af9c-088d7c349580)
 ![D7C3E9D60BC2699F0BC0D78AC5AD3103](https://github.com/user-attachments/assets/a8081be3-894c-48e7-9bd1-7f57b5b48c96)
